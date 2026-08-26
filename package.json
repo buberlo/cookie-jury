@@ -1,0 +1,30 @@
+{
+  "name": "cookie-jury",
+  "version": "1.0.0",
+  "description": "A local web app that imports browser cookie exports, puts each cookie on trial, and clears guilty cookies through absurd penance tasks.",
+  "private": true,
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently -k -n client,server -c cyan,yellow \"vite\" \"node --watch server/index.js\"",
+    "dev:client": "vite",
+    "dev:server": "node --watch server/index.js",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^8.2.2",
+    "vite": "^5.4.8"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}
